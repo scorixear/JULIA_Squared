@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiemannZetaFunctions", "RiemannZetaFunctions.csproj", "{358B0FD2-7D03-4A1F-900A-37F021E048B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZETA_Squared", "ZETA_Squared.csproj", "{358B0FD2-7D03-4A1F-900A-37F021E048B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
