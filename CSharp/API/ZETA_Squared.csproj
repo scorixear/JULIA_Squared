@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,14 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComplexNumber.cs" />
+    <Compile Include="Rational.cs" />
     <Compile Include="Zeta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="GNUMPNet\source\GnuMP.csproj">
-      <Project>{B870A90A-1E3C-4D95-AC73-5CA925DB482A}</Project>
-      <Name>GnuMP</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
