@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JULIA_Squared", "JULIA_Squared.csproj", "{48BD8A4A-5145-4479-AD28-A85A0844F4CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48BD8A4A-5145-4479-AD28-A85A0844F4CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BD8A4A-5145-4479-AD28-A85A0844F4CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BD8A4A-5145-4479-AD28-A85A0844F4CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BD8A4A-5145-4479-AD28-A85A0844F4CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA182B31-5754-4DCE-96C8-6F031D7CC159}
+	EndGlobalSection
+EndGlobal
