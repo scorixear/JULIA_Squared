@@ -1,6 +1,6 @@
-# ![ZETA_Squared](icons/Logo.svg)
+# ![JULIA_Squared](icons/Logo.svg)
 
-The ![ZETA_Squared](icons/Logo_small.svg) repository is a framework for easy and efficient use of the [Euler-Riemann Zeta Function](https://en.wikipedia.org/wiki/Riemann_zeta_function) in various different programming languages.
+The ![JULIA_Squared](icons/Logo_small.svg) repository is a framework for easy and efficient use of the [Julia-Set](https://en.wikipedia.org/wiki/Julia_set) in various different programming languages.
 
 ## Table of Contents  <!-- omit in toc -->
 
@@ -25,7 +25,7 @@ If you want to include this repository as a code project in your project, you mi
 
 If you want to use this repository without including the whole code, see the `master` branch and the `Release` folder.
 
-If you want to work on and improve ![ZETA_Squared](icons/Logo_small.svg), checkout the `develop` branch and follow the instructions in CONTRIBUTING.md.
+If you want to work on and improve ![JULIA_Squared](icons/Logo_small.svg), checkout the `develop` branch and follow the instructions in CONTRIBUTING.md.
 
 ### Sub-Project Description
 
@@ -39,7 +39,7 @@ An example implementation of the [API](#api) in the API-programming language.
 
 #### CSharp
 
-The C# Implementation of ![ZETA_Squared](icons/Logo_small.svg).
+The C# Implementation of ![JULIA_Squared](icons/Logo_small.svg).
 
 ## Building and Testing
 
@@ -53,12 +53,12 @@ The `.sln` files also contain a reference to the `UnitTests` folder, that includ
 
 To summarize the Contributing Process:
 
-- Checkout the [Issue Tracker](https://github.com/scorixear/ZETA_Squared/issues) to submit an issue or see other issues.
+- Checkout the [Issue Tracker](https://github.com/scorixear/JULIA_Squared/issues) to submit an issue or see other issues.
 - Create a branch from `develop` and add your code
 - Add a pull request into `develop` and leave the standard reviewers **AS IS**.
 - Reference the pull request in your created ticket
 - On merging consider updating the README.md if any new languages were added
-and definitly updating the  [wiki](https://github.com/scorixear/ZETA_Squared/wiki)
+and definitly updating the  [wiki](https://github.com/scorixear/JULIA_Squared/wiki)
 - Add yourself on the [contributing list](#contributors) if you want 😉
 
 See the CONTRIBUTING.md file for further information.

@@ -34,7 +34,7 @@ outlines ten steps to your first successful contribution in the form of a
 pull request. 
 
 1. First, create an issue in our 
-[Issue Tracker](https://github.com/scorixear/ZETA_Squared/issues) as a _feature issue_ and describe the
+[Issue Tracker](https://github.com/scorixear/JULIA_Squared/issues) as a _feature issue_ and describe the
 contribution you intend to make.
 
 2. We use [_git flow_](http://nvie.com/posts/a-successful-git-branching-model) 
@@ -58,7 +58,7 @@ Here are some examples for valid feature branch names:
 4. When you'd like to share your code and/or start a Pull Request to get
    feedback, push your commits to the repository.
 
-5. Open the [_Branches_](https://github.com/scorixear/ZETA_Squared/branches) view in Github. Your    newly pushed branch should show
+5. Open the [_Branches_](https://github.com/scorixear/JULIA_Squared/branches) view in Github. Your    newly pushed branch should show
    up there. (Soon, all repositories will have an associated build job which will
    pick up your new branch and build it. The result of the build will be then
    presented in the _Pull-Request_. If the build would fail
@@ -96,7 +96,7 @@ Pull Request in mere minutes or less.
 
 ## <a name="community-guidelines">Community Guidelines</a>
 
-![ZETA_Squared](icons/Logo_small.svg) is an GPL community. We strive to 
+![JULIA_Squared](icons/Logo_small.svg) is an GPL community. We strive to 
 work in accordance with the five Social Coding values:
 
 - _Openness_: We welcome *everyone* to make contributions,
@@ -126,7 +126,7 @@ in Pull Requests) to one-on-one communication.
 ## <a name="whom-to-contact">Whom to contact in case of questions?</a>
 
 In order to allow as many people to benefit from the Q&A around 
-our work, please consider reading the[Wiki](https://github.com/scorixear/ZETA_Squared/wiki).
+our work, please consider reading the[Wiki](https://github.com/scorixear/JULIA_Squared/wiki).
 
 If, for some reason, you prefer kicking off the collaboration in a personal
 conversation, please contact the maintainers of this repository, which are
@@ -314,7 +314,7 @@ valuable to the community, such as
 - reporting bugs,
 - requesting features,
 - adding new or improvements existing documentation,
-- extend the [Wiki](https://github.com/scorixear/ZETA_Squared/wiki)
+- extend the [Wiki](https://github.com/scorixear/JULIA_Squared/wiki)
 - helping other users to use our software,
 - asking and/or answering questions in other issues,
 - promoting Social Coding, our community and our software or

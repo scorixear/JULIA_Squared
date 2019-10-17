@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Numerics;
 
-namespace ZETA_Squared
+namespace JULIA_Squared
 {
     public class Rational : IComparable<Rational>, IComparable, ICloneable, IEquatable<Rational>
     {
@@ -16,7 +16,9 @@ namespace ZETA_Squared
             Init(numerator, denominator);
         }
 
-        public Rational(double d = 0.0) : this(d, BigInteger.Parse("131072")) { }
+        public Rational(BigInteger numerator) : this(numerator, 1) { }
+
+        public Rational(double d) : this(d, BigInteger.Parse("131072")) { }
         public Rational(double d, BigInteger maximumDenominator)
         {
 
@@ -63,7 +65,7 @@ namespace ZETA_Squared
             Init(neg != 0 ? -h[1] : h[1], k[1]);
         }
 
-        public Rational(int i) : this(numerator: i, 1) { }
+        public Rational(int i = 0) : this(numerator: i, 1) { }
 
         public Rational(uint ui) : this(numerator: ui, 1) { }
 
@@ -83,9 +85,45 @@ namespace ZETA_Squared
             return new Rational(i);
         }
 
+        public static implicit operator Rational(BigInteger bI)
+        {
+            return new Rational(bI);
+        }
+
         public static implicit operator Rational((BigInteger n, BigInteger d) p)
         {
-            return  new Rational(p.n, p.d);
+            return new Rational(p.n, p.d);
+        }
+
+        public static explicit operator decimal(Rational r)
+        {
+            return ((decimal) r.Numerator) / ((decimal) r.Denominator);
+        }
+
+        public static explicit operator double(Rational r)
+        {
+            return ((double)r.Numerator) / ((double)r.Denominator);
+        }
+
+        public static bool operator <=(Rational a, Rational b)
+        {
+            return a.CompareTo(b) <= 0;
+        }
+
+        public static bool operator >=(Rational a, Rational b)
+        {
+            return a.CompareTo(b) >= 0;
+        }
+
+
+        public static bool operator <(Rational a, Rational b)
+        {
+            return a.CompareTo(b) < 0;
+        }
+
+        public static bool operator >(Rational a, Rational b)
+        {
+            return a.CompareTo(b) > 0;
         }
 
         public static Rational operator +(Rational a, Rational b)
@@ -215,6 +253,52 @@ namespace ZETA_Squared
                 }
             }
             return num1 * num2;
+        }
+
+        public BigInteger Floor()
+        {
+            BigInteger i = 0;
+            BigInteger numerator = Numerator;
+            BigInteger denominator = Denominator;
+            if (numerator >= 0)
+            {
+                while (numerator > denominator)
+                {
+                    i++;
+                    numerator = numerator - denominator;
+                }
+            }
+            else
+            {
+                while (numerator < denominator)
+                {
+                    i--;
+                    numerator = numerator + denominator;
+                }
+            }
+            return i;
+        }
+
+        private Rational ToPositive()
+        {
+            if (Numerator < 0)
+            {
+                return new Rational(Numerator*-1, Denominator);
+            }
+
+            return new Rational(Numerator, Denominator);
+        }
+
+        public static Rational ApproximateSqrt(Rational rational, Rational threshHold)
+        {
+            Rational start = (Rational)rational.Clone();
+            Rational solution = Math.Sqrt((double) rational);
+            while((solution - start).ToPositive() < threshHold )
+            {
+                solution = (solution + start / solution) / 2;
+            }
+
+            return solution;
         }
     }
 }

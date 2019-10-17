@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ZETA_Squared
+namespace JULIA_Squared
 {
-    class ComplexNumber : IComparable<ComplexNumber>, IComparable, ICloneable
+    public class ComplexNumber : IComparable<ComplexNumber>, IComparable, ICloneable
     {
 
         public Rational RealPart { get; private set; }
@@ -14,11 +14,11 @@ namespace ZETA_Squared
             ComplexPart = complex ?? new Rational(0);
         }
 
-        public ComplexNumber(double real = 0, double complex = 0.0) : this(new Rational(real), new Rational(complex)) { }
+        public ComplexNumber(double real, double complex) : this(new Rational(real), new Rational(complex)) { }
 
-        public ComplexNumber(int real = 0, int complex = 0) : this(new Rational(real), new Rational(complex)) { }
+        public ComplexNumber(int real, int complex) : this(new Rational(real), new Rational(complex)) { }
 
-        public ComplexNumber(uint real = 0, uint complex = 0) : this(new Rational(real), new Rational(complex)) { }
+        public ComplexNumber(uint real, uint complex ) : this(new Rational(real), new Rational(complex)) { }
 
         public static implicit operator ComplexNumber(Rational r)
         {
@@ -43,6 +43,26 @@ namespace ZETA_Squared
         public static implicit operator ComplexNumber((Rational r, Rational c) p)
         {
             return new ComplexNumber(p.r, p.c);
+        }
+
+        public static bool operator <=(ComplexNumber a, ComplexNumber b)
+        {
+            return a.CompareTo(b) <= 0;
+        }
+
+        public static bool operator >=(ComplexNumber a, ComplexNumber b)
+        {
+            return a.CompareTo(b) >= 0;
+        }
+
+        public static bool operator <(ComplexNumber a, ComplexNumber b)
+        {
+            return a.CompareTo(b) < 0;
+        }
+
+        public static bool operator >(ComplexNumber a, ComplexNumber b)
+        {
+            return a.CompareTo(b) > 0;
         }
 
         public static ComplexNumber operator +(ComplexNumber a, ComplexNumber b)
@@ -96,6 +116,11 @@ namespace ZETA_Squared
         public object Clone()
         {
             return ((Rational)RealPart.Clone(), (Rational)ComplexPart.Clone());
+        }
+
+        public Rational Distance(ComplexNumber other)
+        {
+            return Rational.ApproximateSqrt((other.RealPart - RealPart)* (other.RealPart - RealPart) + (other.ComplexPart - ComplexPart)* (other.ComplexPart - ComplexPart), 0.1);
         }
     }
 }
